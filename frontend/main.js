@@ -8,11 +8,11 @@ document.getElementById("startBtn").addEventListener("click", async () => {
       return;
     }
 
-    // Take the first quiz
+    
     const quiz = quizzes[0];
     localStorage.setItem("quiz", JSON.stringify(quiz));
 
-    // Go to quiz page
+    
     window.location.href = "quiz.html";
 
   } catch (err) {

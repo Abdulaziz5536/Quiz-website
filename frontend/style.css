@@ -1,21 +1,67 @@
 body {
-  font-family: Arial;
-  background: #f4f4f4;
-  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  margin-top: 100px;
-}
-
-button {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
+  max-width: 600px;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
 }
 
 h1, h2 {
   color: #333;
+}
+
+button {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  background: #3498db;
+  color: white;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+#options button {
+  background: #ecf0f1;
+  color: #333;
+}
+
+#options button:hover {
+  background: #d0d7de;
+}
+
+.question-review {
+  text-align: left;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.wrong {
+  color: red;
+  font-weight: bold;
 }

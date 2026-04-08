@@ -27,22 +27,28 @@ function showQuestion() {
   });
 }
 
-async function submitQuiz() {
-  try {
-    const res = await fetch("http://localhost:4000/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ answers, quiz })
-    });
 
-    const data = await res.json();
-    localStorage.setItem("score", data.score);
-    window.location.href = "result.html";
+ async function submitQuiz() {
+  const res = await fetch("http://localhost:4000/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      answers: answers,
+      quiz: quiz
+    })
+  });
 
-  } catch (err) {
-    console.error("Error submitting quiz:", err);
-    alert("Failed to submit quiz.");
-  }
+  const data = await res.json();
+
+  
+  localStorage.setItem("score", data.score);
+  localStorage.setItem("answers", JSON.stringify(answers));
+  localStorage.setItem("quiz", JSON.stringify(quiz));
+
+  window.location.href = "result.html";
 }
+
 
 showQuestion();
