@@ -75,8 +75,8 @@ project/
 ### 1️⃣ Clone the repository
 
 ```
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/Abdulaziz5536/Quiz-website.git
+cd Quiz-website
 ```
 
 ---
@@ -88,12 +88,6 @@ cd backend
 npm install
 ```
 
-Create a `.env` file:
-
-```
-MONGO_URI=your_mongodb_atlas_connection_string
-```
-
 Run the server:
 
 ```
@@ -103,7 +97,7 @@ node server.js
 Server will run on:
 
 ```
-http://localhost:4000
+http://localhost
 ```
 
 ---
@@ -115,12 +109,6 @@ Open a new terminal:
 ```
 cd frontend
 http-server -c-1
-```
-
-Then open:
-
-```
-http://127.0.0.1:8080
 ```
 
 ---
